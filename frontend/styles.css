@@ -1,0 +1,233 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #e0f2f7; 
+    color: #333; 
+    line-height: 1.6;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%; 
+    max-width: 960px; 
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    justify-content: flex-start; 
+    min-height: auto; 
+    margin: 20px auto; 
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header .welcome-message {
+    margin-right: 20px;
+    font-size: 1.2em;
+    color: #37474f; 
+    font-weight: 500; 
+    letter-spacing: 0.01em; 
+    opacity: 0.9; 
+    transition: color 0.3s ease-in-out; 
+}
+
+header .welcome-message:hover {
+    color: #29b6f6;
+    opacity: 1;
+}
+
+header .welcome-message::before {
+    content: "😁"; 
+    margin-right: 8px;
+    font-size: 1.3em; 
+    vertical-align: middle; 
+}
+
+header h1 {
+    margin: 0;
+    color: #29b6f6; 
+    flex-grow: 1;
+    padding-right: 7px;
+    
+}
+
+header .controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header .controls input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+header .controls button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #29b6f6; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header .controls button:hover {
+    background-color: #03a9f4; 
+}
+
+header .controls .sort-dropdown label {
+    margin-right: 5px;
+}
+
+header .controls .sort-dropdown select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+main {
+    max-width: none;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+main #contact-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+main #contact-list th,
+main #contact-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+main #contact-list th {
+    background-color: #f2f2f2;
+}
+
+main #contact-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+main #contact-list .actions-cell {
+    white-space: nowrap; 
+}
+
+button.action-item {
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+button.action-item:hover {
+    background-color: #0056b3;
+}
+
+main .modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(5px); 
+    transition: opacity 0.3s ease-in-out;
+}
+
+main .modal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    border-radius: 8px;
+    position: relative;
+}
+
+main .modal .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+main .modal .close-button:hover,
+main .modal .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+main #contact-form label {
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+main #contact-form input[type="text"],
+main #contact-form input[type="tel"],
+main #contact-form input[type="email"],
+main #contact-form input[type="checkbox"] {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 130px); 
+    box-sizing: border-box;
+}
+
+main #contact-form button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #29b6f6; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main #contact-form button[type="submit"]:hover {
+    background-color: #03a9f4; /
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #e0f2f7;
+    color: #555;
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 8px 8px;
+    margin-top: 20px;
+    width: 100%; 
+    box-sizing: border-box;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts4U</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="welcome-message">
+                <span id="user-greeting">Welcome, [First, Last]</span>
+            </div>
+            <h1>Contacts4U</h1>
+            <div class="controls">
+                <input type="text" id="search-bar" placeholder="Search contacts..">
+                <button id="add-contact-btn">Add New Contact</button>
+                <button id="favorites-btn">Favorites</button>
+                <div class="sort-dropdown">
+                    <label for="sort-select"></label>
+                    <select id="sort-select">
+                        <option value="">Sort</option>
+                        <option value="name_asc">Full Name A-Z</option>
+                        <option value="name_desc">Full Name Z-A</option>
+                        <option value="email_asc">Email A-Z</option>
+                        <option value="email_desc">Email Z-A</option>
+                    </select>
+                </div>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <main>
+            <h2>My Contacts</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Nickname</th>
+                        <th>Phone-Number</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="contact-list">
+                </tbody>
+            </table>
+
+            <div id="contact-form-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Add/Edit Contact</h2>
+                    <form id="contact-form">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required><br><br>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName"><br><br>
+                        <label for="nickname">Nickname:</label>
+                        <input type="text" id="nickname" name="nickname"><br><br>
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber"><br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"><br><br>
+                        <label for="favorite">Favorite:</label>
+                        <input type="checkbox" id="favorite" name="favorite"><br><br>
+                        <button type="submit">Save Contact</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Contacts4U</p>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+
+</html>
